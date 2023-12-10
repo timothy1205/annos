@@ -1,0 +1,28 @@
+version: "3.8"
+
+name: annos-prod
+
+services:
+    annos-server:
+        container_name: annos_server
+        build:
+            context: ../server
+            dockerfile: ./Dockerfile
+            target: dev
+        environment:
+            - DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER=1
+        ports:
+            - 5048:5048
+        command: dotnet watch run --no-restore
+        volumes:
+            - ../server:/build
+    
+    annos-web:
+        container_name: annos_web
+        build:
+            context: ../web
+            dockerfile: ./Dockerfile
+        ports:
+            - 4200:4200
+        volumes:
+            - ../web/src:/usr/src/app/src

@@ -1,0 +1,30 @@
+version: "3.8"
+
+name: annos-dev
+
+services:
+    annos-server:
+        container_name: annos_server
+        build:
+            context: ../server
+            dockerfile: ./Dockerfile
+            target: dev
+        environment:
+            - DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER=1
+        ports:
+            - 8080:8080
+        command: dotnet watch run --no-restore --non-interactive
+        volumes:
+            - ../server/:/build
+            # Do not map server/bin
+            - /build/bin
+    
+    annos-web:
+        container_name: annos_web
+        build:
+            context: ../web
+            dockerfile: ./Dockerfile
+        ports:
+            - 4200:4200
+        volumes:
+            - ../web/src:/usr/src/app/src
