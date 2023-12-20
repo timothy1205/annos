@@ -5,3 +5,5 @@
 
 server/bin
 server/obj
+
+db/

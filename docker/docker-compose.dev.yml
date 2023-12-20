@@ -28,3 +28,13 @@ services:
             - 4200:4200
         volumes:
             - ../web/src:/usr/src/app/src
+
+    annos-db:
+        container_name: annos_db
+        image: postgres:16-alpine
+        ports:
+            - 5432:5432
+        volumes:
+            - ../db:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_PASSWORD=dev
