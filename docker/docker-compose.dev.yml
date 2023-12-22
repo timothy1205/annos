@@ -16,7 +16,7 @@ services:
         command: dotnet watch run --no-restore --non-interactive
         volumes:
             - ../server/:/build
-            # Do not map server/bin
+            - /build/obj
             - /build/bin
     
     annos-web:
