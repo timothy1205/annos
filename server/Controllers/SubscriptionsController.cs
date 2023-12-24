@@ -61,7 +61,7 @@ public class SubscriptionsController : AnnosControllerBase
                 new Subscription
                 {
                     Name = data["name"],
-                    Price = double.Parse(data["price"]!.ToString()),
+                    Price = decimal.Parse(data["price"]!.ToString()),
                     Cycle = int.Parse(data["cycle"]!.ToString()),
                     Frequency = frequency,
                     NextPaymentDate = DateTime.Parse(data["next_payment"]!.ToString()),
@@ -106,7 +106,7 @@ public class SubscriptionsController : AnnosControllerBase
                 new Subscription
                 {
                     Name = data["name"],
-                    Price = double.Parse(data["price"]!.ToString()),
+                    Price = decimal.Parse(data["price"]!.ToString()),
                     Frequency = frequency,
                     Cycle = int.Parse(data["cycle"]!.ToString()),
                     NextPaymentDate = DateTime.Parse(data["next_payment"]!.ToString()),

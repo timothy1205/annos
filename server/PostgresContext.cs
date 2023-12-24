@@ -18,9 +18,8 @@ public class PostgresContext : DbContext
     {
         modelBuilder.Entity<Subscription>()
         .HasOne(s => s.SubscriptionCategory)
-        .WithOne()
-        .HasForeignKey<Subscription>(s => s.SubscriptionCategoryId)
-        .IsRequired();
+        .WithMany()
+        .HasForeignKey(s => s.SubscriptionCategoryId);
     }
 
 }

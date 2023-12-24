@@ -1,4 +1,3 @@
-using System.Text.Json;
 using annos_server.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +15,6 @@ public class SubscriptionService
 
     public async Task AddSubscriptionAsync(Subscription sub)
     {
-        Console.WriteLine(JsonSerializer.Serialize(sub));
-        Console.Out.Flush();
-
         ctx.Subscriptions.Add(sub);
         await ctx.SaveChangesAsync();
     }
