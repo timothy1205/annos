@@ -1,0 +1,22 @@
+<div class="subscription-main">
+  <span class="category" title="Category"
+    ><img
+      class="image medium"
+      src="assets/siteicons/category.png"
+      alt="Category"
+    />{{ subscription.subscriptionCategoryId }}</span
+  >
+  <span class="name">{{ subscription.name }}</span>
+  <span class="cycle">{{ subscription.cycle }}</span>
+  <span class="next">{{ formattedDate }}</span>
+  <span class="price">{{ formattedPrice }}</span>
+  <span class="actions">
+    <button class="image-button medium" name="edit">
+      <img
+        src="assets/siteicons/edit.png"
+        title="Edit subscription"
+        alt="Edit subscription"
+      />
+    </button>
+  </span>
+</div>

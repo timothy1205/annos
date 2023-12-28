@@ -5,13 +5,3 @@
     gap: 20px;
     justify-content: space-between;
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 100%;
-    max-width: 970px;
-    margin: 0px auto;
-    box-sizing: border-box;
-  }

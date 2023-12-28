@@ -1,0 +1,54 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.subscription-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.subscription-main > span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.category {
+  gap: 12px;
+  flex-basis: 17%;
+}
+
+.name {
+  flex-basis: 25%;
+  font-weight: 600;
+}
+
+.cycle {
+  flex-basis: 16%;
+  flex-grow: 1;
+}
+
+.next {
+  flex-basis: 16%;
+  flex-grow: 1;
+}
+
+.price {
+  flex-basis: 12%;
+}
+
+.actions {
+  flex-basis: auto;
+}

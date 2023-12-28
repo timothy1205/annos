@@ -1,25 +1,50 @@
 body {
-    font-family: Barlow, 'Helvetica Neue', Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #303030;
-    color: #E0E0E0;
+  font-family: Barlow, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #303030;
+  color: #e0e0e0;
 }
 
 h2 h3 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .color-lightgray {
-    color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 .title {
-    text-align: center;
+  text-align: center;
 }
 
 .container {
-    background-color: #222;
-    border: 1px solid #333;
-    box-shadow: 0 2px 5px rgba(120, 120, 120, 0.1);
+  background-color: #222;
+  border: 1px solid #333;
+  box-shadow: 0 2px 5px rgba(120, 120, 120, 0.1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  max-width: 970px;
+  margin: 0px auto;
+  box-sizing: border-box;
+}
+
+.image-button {
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.image.medium,
+.image-button.medium > img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
