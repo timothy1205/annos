@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Barlow, 'Helvetica Neue', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #303030;
+    color: #E0E0E0;
+}
+
+h2 h3 {
+    font-weight: 500;
+}
+
+.color-lightgray {
+    color: #E0E0E0;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    background-color: #222;
+    border: 1px solid #333;
+    box-shadow: 0 2px 5px rgba(120, 120, 120, 0.1);
+}

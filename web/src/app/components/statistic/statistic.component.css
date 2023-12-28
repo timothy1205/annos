@@ -1,0 +1,15 @@
+:host {
+    border-radius: 8px;
+    padding: 20px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 31%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+:host > span {
+    font-size: 42px;
+    color: #0056b3;
+}
