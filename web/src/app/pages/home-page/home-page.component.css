@@ -1,0 +1,51 @@
+#main-actions {
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#subscriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.sort-container {
+  position: relative;
+}
+
+#sort-options {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  top: 48px;
+  right: 0px;
+  display: none;
+  width: 144px;
+}
+
+#sort-options > ul {
+  margin: 0;
+  padding: 0;
+}
+
+#sort-options > ul > li {
+  border-bottom: 1px solid #555;
+  list-style: none;
+  padding: 10px 35px 10px 10px;
+  cursor: pointer;
+}
+
+#sort-options > ul > li.selected {
+  background-image: url("/assets/siteicons/check.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+}
