@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace annos_server.Models;
 
 public class Subscription
@@ -10,6 +12,8 @@ public class Subscription
     public int Cycle { get; set; }
 
     public int SubscriptionCategoryId { get; set; }
+
+    [JsonIgnore]
     public Category? SubscriptionCategory { get; set; }
     private DateTime _NextPaymentDate;
     public DateTime NextPaymentDate
