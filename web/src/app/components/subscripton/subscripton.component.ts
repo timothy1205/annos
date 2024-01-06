@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SubscriptionModel } from '../../models/SubscriptionModel';
+import { SubscriptionModel } from '../../models/subscription.model';
 
 @Component({
   selector: 'app-subscripton',

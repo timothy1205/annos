@@ -1,7 +1,7 @@
-import { SubscriptonService } from './../../servies/subscripton.service';
+import { SubscriptonService } from '../../services/subscripton.service';
 import { Component, OnInit } from '@angular/core';
 import { SubscriptonComponent } from '../../components/subscripton/subscripton.component';
-import { SubscriptionModel } from '../../models/SubscriptionModel';
+import { SubscriptionModel } from '../../models/subscription.model';
 import { NgFor } from '@angular/common';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SubscriptionModel } from '../models/SubscriptionModel';
+import { SubscriptionModel } from '../models/subscription.model';
 
 @Injectable({
   providedIn: 'root',
