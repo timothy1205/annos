@@ -25,10 +25,9 @@
     </div>
   </header>
   <div id="subscriptions">
-    <app-subscripton [subscription]="subscriptionTest"></app-subscripton>
-    <app-subscripton [subscription]="subscriptionTest"></app-subscripton>
-    <app-subscripton [subscription]="subscriptionTest"></app-subscripton>
-    <app-subscripton [subscription]="subscriptionTest"></app-subscripton>
-    <app-subscripton [subscription]="subscriptionTest"></app-subscripton>
+    <app-subscripton
+      *ngFor="let sub of subscriptions"
+      [subscription]="sub"
+    ></app-subscripton>
   </div>
 </main>
