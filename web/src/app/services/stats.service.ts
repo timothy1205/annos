@@ -5,7 +5,11 @@ import { StatsModel } from '../models/stats.model';
   providedIn: 'root',
 })
 export class StatsService {
+  private stats: StatsModel | null = null;
+
   async getStatistics(): Promise<StatsModel> {
+    if (this.stats != null) return this.stats;
+
     const req = await fetch('http://localhost:8080/Stats/Get');
     const data = await req.json();
 
@@ -24,7 +28,7 @@ export class StatsService {
     return data;
   }
 
-  private formatCurrency(value: number) {
+  public formatCurrency(value: number) {
     return '$' + Intl.NumberFormat().format(value);
   }
 }

@@ -28,6 +28,25 @@
   </div>
 
   <h2>Split Views</h2>
+  <div class="container">
+    <apx-chart
+      [series]="series"
+      [chart]="{ type: 'pie', foreColor: '#888', }"
+      [labels]="labels"
+      [title]="{
+        text: 'Category Split',
+        align: 'center',
+        style: { fontSize: '20px' }
+      }"
+      [subtitle]="{
+        text: '(Monthly Cost)',
+        align: 'center',
+        style: { fontSize: '15px' }
+      }"
+      [legend]="{ position: 'top' }"
+      [tooltip]="{ y: { formatter: statsService.formatCurrency } }"
+    ></apx-chart>
+  </div>
 </main>
 
 <ng-template #noStatsBlock>
