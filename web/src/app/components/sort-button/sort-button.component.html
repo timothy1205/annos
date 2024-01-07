@@ -1,0 +1,21 @@
+<button
+  id="sort-button"
+  class="button"
+  value="Sort"
+  (click)="toggleSortPopup()"
+>
+  <img src="assets/siteicons/sort.png" class="button-icon" alt="Sort" />
+  Sort
+</button>
+<div *ngIf="showSort" class="container" id="sort-options">
+  <ul>
+    <li
+      *ngFor="let entry of sortOptions | keyvalue"
+      [id]="entry.key"
+      class="{{ activeSortOption.valueOf() == entry.key ? 'selected' : '' }}"
+      (click)="onSortClick(entry.key)"
+    >
+      {{ entry.value }}
+    </li>
+  </ul>
+</div>

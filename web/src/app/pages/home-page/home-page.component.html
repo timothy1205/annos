@@ -9,29 +9,9 @@
       New Subscription
     </button>
     <div class="sort-container">
-      <button
-        class="button"
-        value="Sort"
-        id="sort-button"
-        (click)="toggleSortPopup()"
-      >
-        <img src="assets/siteicons/sort.png" class="button-icon" alt="Sort" />
-        Sort
-      </button>
-      <div *ngIf="showSort" class="container" id="sort-options">
-        <ul>
-          <li
-            *ngFor="let entry of sortOptions | keyvalue"
-            [id]="entry.key"
-            class="{{
-              activeSortOption.valueOf() == entry.key ? 'selected' : ''
-            }}"
-            (click)="onSortClick(entry.key)"
-          >
-            {{ entry.value }}
-          </li>
-        </ul>
-      </div>
+      <app-sort-button
+        [subscriptions]="subscriptions"
+      ></app-sort-button>
     </div>
   </header>
   <div id="subscriptions">
