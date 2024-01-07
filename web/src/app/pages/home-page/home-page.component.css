@@ -27,7 +27,6 @@
   box-sizing: border-box;
   top: 48px;
   right: 0px;
-  display: none;
   width: 144px;
 }
 
@@ -41,6 +40,10 @@
   list-style: none;
   padding: 10px 35px 10px 10px;
   cursor: pointer;
+}
+
+#sort-options > ul > li:hover {
+  background-color: #444;
 }
 
 #sort-options > ul > li.selected {

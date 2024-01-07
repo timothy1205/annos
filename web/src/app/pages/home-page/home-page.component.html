@@ -9,17 +9,27 @@
       New Subscription
     </button>
     <div class="sort-container">
-      <button class="button" value="Sort" id="sort-button">
+      <button
+        class="button"
+        value="Sort"
+        id="sort-button"
+        (click)="toggleSortPopup()"
+      >
         <img src="assets/siteicons/sort.png" class="button-icon" alt="Sort" />
         Sort
       </button>
-      <div class="container" id="sort-options">
+      <div *ngIf="showSort" class="container" id="sort-options">
         <ul>
-          <li id="sort-name">Name</li>
-          <li id="sort-id">Last Added</li>
-          <li id="sort-price">Price</li>
-          <li id="sort-next_payment">Next payment</li>
-          <li id="sort-category_id">Category</li>
+          <li
+            *ngFor="let entry of sortOptions | keyvalue"
+            [id]="entry.key"
+            class="{{
+              activeSortOption.valueOf() == entry.key ? 'selected' : ''
+            }}"
+            (click)="onSortClick(entry.key)"
+          >
+            {{ entry.value }}
+          </li>
         </ul>
       </div>
     </div>
