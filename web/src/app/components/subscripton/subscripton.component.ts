@@ -14,6 +14,7 @@ export class SubscriptonComponent implements OnInit {
 
   formattedDate: string = '';
   formattedPrice: string = '';
+  cycleTranslation = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
 
   ngOnInit() {
     const year = this.subscription.nextPaymentDate.getFullYear();

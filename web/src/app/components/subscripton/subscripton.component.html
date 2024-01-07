@@ -7,7 +7,7 @@
     />{{ subscription.subscriptionCategoryId }}</span
   >
   <span class="name">{{ subscription.name }}</span>
-  <span class="cycle">{{ subscription.cycle }}</span>
+  <span class="cycle">{{ cycleTranslation[subscription.cycle - 1] }}</span>
   <span class="next">{{ formattedDate }}</span>
   <span class="price">{{ formattedPrice }}</span>
   <span class="actions">
